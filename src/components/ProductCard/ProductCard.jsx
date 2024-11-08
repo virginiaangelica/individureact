@@ -28,11 +28,14 @@ export default function ProductCard({product}) {
                         </Button>
                     </>
                  
-                  ) : (
-                    <Button type="button" className="inline-flex items-center justify-center gap-2 p-4 bg-[#6173E6] text-center hover:bg-[#5969cf] text-white active:bg-[#4956ab]">
+                  ) : (<>
+                  <Button type="button" className="inline-flex items-center justify-center gap-2 p-4 bg-[#6173E6] text-center hover:bg-[#5969cf] text-white active:bg-[#4956ab] mt-[28px]">
                       <FontAwesomeIcon icon={faCartShopping} className="mb-0" />
                       <span>Add to cart</span>
                     </Button>
+                    
+                      </>
+                    
                   )}
               </div>
           </div>
