@@ -4,11 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
 import formatToIDRCurrency from "../../utils/formatToIDRCurrency";
 import Button from "../Button/Button";
+import { Link } from "react-router-dom";
 
 export default function ProductCard({product}) {
 
   return (
-    <div className="flex flex-col max-w-[370px] flex-wrap p-[16px] bg-[#081116]" >
+    <Link to={`/products/${product.slug}` ?? ''} className="flex flex-col max-w-[370px] flex-wrap p-[16px] bg-[#081116] hover:ring-opacity-40 active:ring-5 active:ring-[#6247eb] hover:ring-4 active:ring-2 active:ring-opacity-90" >
          <img src={product?.imageUrl ?? ''} alt={product?.name ?? 'No Title'} className="block max-h-[300px] mb-4 object-cover" />
           <div className="flex flex-col gap-2">
               <h4 className="font-medium text-[20px] text-white">{product?.name ?? 'No Title'}</h4>
@@ -39,7 +40,7 @@ export default function ProductCard({product}) {
                   )}
               </div>
           </div>
-        </div>
+        </Link>
   )
 }
 
