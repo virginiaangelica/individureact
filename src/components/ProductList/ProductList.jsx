@@ -6,11 +6,11 @@ export default function ProductList({products}) {
     <>
       {products.length > 0  ? (
         products.map((product, index) => 
-       
+      
             <ProductCard product={product} index={index} key={product?.id ?? index} />
         )
       ) : <h5 className='text-center col-span-4 text-2xl'>
-              There&apos;s no products currently.
+              Produk Tidak Ditemukan.
           </h5>
           }
     </>

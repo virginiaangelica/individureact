@@ -1,13 +1,14 @@
-export default function getAllProductCategories(){
-  return  [   {
-      id: 'FMEN',
-      slug: 'men-shoes',
-      name: `Men's Shoes`
+export default function getAllProductCategories() {
+  return [
+    {
+      id: "LUKAM",
+      slug: "lukisan-alam",
+      name: `Lukisan Alam`,
     },
     {
-      id: 'FWMEN',
-      slug: 'women-shoes',
-      name: `Women's Shoes`
+      id: "LUTAN",
+      slug: "lukisan-metropolitan",
+      name: `Lukisan Metropolitan`,
     },
-  ]
+  ];
 }

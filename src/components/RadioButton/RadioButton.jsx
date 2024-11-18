@@ -5,11 +5,11 @@ export default function RadioButton({ options, defaultValue, onChange }) {
 
   const handleSelectionChange = (value) => {
     setSelected(value);
-    onChange(value); // Call onChange prop to update the parent component
+    onChange(value); 
   };
 
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-6">
       {options.map((option, index) => (
         <label
           key={option.value}
@@ -26,18 +26,18 @@ export default function RadioButton({ options, defaultValue, onChange }) {
           <span
             className={`w-4 h-4 rounded-full flex items-center justify-center border ${
               selected === option.value
-                ? 'bg-[#6173E6] border-[#6173E6]'
-                : 'border-[#656666]'
+                ? 'bg-gray-600 border-black'
+                : 'border-black'
             }`}
-            style={{ width: '16px', height: '16px', borderWidth: '1px' }}
+            style={{ width: '20px', height: '20px', borderWidth: '2px' }}
           >
             {selected === option.value && (
-              <span className="w-2.5 h-2.5 bg-[#6173E6] rounded-full"></span>
+              <span className="w-2.5 h-2.5 bg-gray-400 rounded-full"></span>
             )}
           </span>
           <span
             className={`ml-2 ${
-              selected === option.value ? 'text-[#081116]' : 'text-[#656666]'
+              selected === option.value ? 'text-white' : 'text-yellow-300 '
             }`}
           >
             {option.label}
